@@ -25,46 +25,38 @@
                 geht es direkt zur Aufbauanleitung!
             </div>
         </a>
-        <p>Diese Website soll dir das Gadget (Wordclock Mini)
-            näherbringen. Dazu ist sie in mehrere Seiten unterteilt, die verschiedene Aspekte behandeln. Zur Navigation
-            kannst du die Buttons am unteren Ende der Seite benutzen, oder du springst hier direkt zu einer der
-            Seiten:</p>
-
         <iframe src="table_of_contents.html"
                 onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
         <h1 id="einführung">Einführung</h1>
-        <p>Das Gadget ist eine Uhr mit insgesamt xxx Funktionen. Diese Funktionen werden mit einem
-            Microcontroller und verschiedenen Modulen realisiert. Diese Funktionen sind:</p>
-        <ol>
-            <li>xxx</li>
-        </ol>
-
-        <p>Auf die Funktionen wird in den nächsten Kapiteln ausführlicher eingegangen.
-            Ein Mikrocontroller ist ein „kleiner mini Computer“. Sie sind im Alltag eher unbekannt und
-            sind die Helden hinter den Dingen. Viele Geräte wären ohne einen Mikrocontroller undenkbar. Meistens werden
-            sie für Steuerungs- und Kommunikationsaufgaben eingesetzt. So finden sie z.B. in den folgenden Geräten und
-            Anwendungen ihren Platz:</p>
-        <ul>
-            <li>Radio</li>
-            <li>Roboter</li>
-            <li>Fernseher</li>
-            <li>Flugzeuge</li>
-            <li>Fernbedienungen</li>
-            <li>Waschmaschinen</li>
-            <li>Intelligente Systeme z.B. Airbag</li>
-            <li>Intelligente Systeme in der Automatisierung</li>
-            <li>Erfassung von Messwerten z.B. Drehzahl</li>
-        </ul>
-        <p align="center">
-        <img src="assets/images/ESP32_nano.jpg" width ="300" alt="ESP32_Nano">
-        </p>
-
-        <p>Die Aufgaben sind vielfältig und so auch die Möglichkeiten, die sich dadurch ergeben. Ein Mikrocontroller
-            muss für seine zu bewerkstelligende Aufgabe programmiert werden. Diesen Programmcode durchläuft der
-            Mikrocontroller immer wieder „unendlich oft“. So führt er präzise seine Aufgabe aus und kommt dabei nicht
-            durcheinander, denn er führt Zeile für Zeile in seinem programmierten Code aus. Dadurch wird auch deutlich,
-            dass die Programmierung ein wesentlicher Bestandteil der Elektrotechnik ist und immer mehr Einzug erhält.
-            Wir verwenden in dem Gadget den Mikrocontroller ESP32 Nano.</p>
+        <p>Die Wordclock Mini ist eine kompakte LED-Wortuhr, die mit einem ESP8266-Mikrocontroller und einer 8×8 RGB-LED-Matrix aufgebaut wird. 
+        Trotz ihrer geringen Größe vereint sie moderne Elektronik, Programmierung und Netzwerktechnik in einem einzigen Projekt.</p>
+        <p>Mit der Wordclock Mini lernst du die Grundlagen des Lötens, den Umgang mit Mikrocontrollern sowie die Konfiguration eines WLAN-fähigen IoT-Geräts kennen. 
+        Nach dem Zusammenbau kann die Uhr über eine Weboberfläche individuell angepasst und konfiguriert werden.</p>
+        <p>Das Gadget verfügt über mehrere Funktionen:</p>
+        <u1>
+            <li>Anzeige der aktuellen Uhrzeit</li>
+            <li>Individuelle Farbgestaltung der Anzeige</li>
+            <li>Konfiguration über einen integrierten Webserver</li>
+            <li>WLAN-Anbindung für automatische Zeitsynchronisation</li>
+        </u1>
+        <p>Auf diese Funktionen wird in den nächsten Kapiteln näher eingegangen.</p>
+        <p>Ein Mikrocontroller ist ein kleiner Computer, der speziell für Steuerungs- und Automatisierungsaufgaben entwickelt wurde. 
+        Er arbeitet im Hintergrund vieler technischer Geräte und sorgt dafür, dass diese zuverlässig ihre Aufgaben ausführen. Mikrocontroller finden sich unter anderem in:</p>
+        <u1>
+            <li>Haushaltsgeräten</li>
+            <li>Fahrzeugen</li>
+            <li>Robotern</li>
+            <li>Smart-Home-Komponenten</li>
+            <li>Industriellen Automatisierungssystemen</li>
+            <li>Mess- und Regeltechnik</li>
+            <li>Kommunikationsgeräten</li>
+        </u1>
+        <p>Damit ein Mikrocontroller seine Aufgaben erfüllen kann, wird er mit einer speziellen Software programmiert. 
+        Diese Software wird dauerhaft ausgeführt und steuert alle Funktionen des Geräts. 
+        In der Wordclock Mini kommt ein ESP8266-basierter D1 Mini zum Einsatz. 
+        Dieser verbindet die Uhr mit dem WLAN und steuert die RGB-LED-Matrix, auf der die Uhrzeit dargestellt wird.</p>
+        <p>Im weiteren Verlauf erfährst du, wie die Hardware aufgebaut wird, wie die einzelnen Komponenten miteinander verbunden sind und wie die Wordclock Mini erstmals in Betrieb genommen wird.</p>
+        <p>Viel Spaß beim Aufbau deiner Wordclock Mini!</p>
 
             <div id="navigation">
                 <a href="assembly.html">
