@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <title>Einführung</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+</head>
+<body>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+
+        <h1 id="project_title">Wordclock Mini</h1>
+        <h2 id="project_tagline">Wordclock Mini Gadget der SPE Karlsruhe</h2>
+        <h3 id="project_tagline">Work in Progress</h3>
+    </header>
+</div>
+    
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <iframe src="table_of_contents.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        
+        <h1 id="aufbau">Aufbau</h1>
+        <p>Insgesamt besteht das Gadget aus den folgenden Bauteilen:</p>
+        <p align="center">
+        <img src="assets/images/assembly/Material.png" width ="600" alt="Material">
+        </p>
+        <ul>
+            <li>1x Gehäuse</li>
+            <li>1x Montageplatte</li>
+            <li>1x Rückwand</li>
+            <li>3x Adern 10 cm 0.25 mm² (rot, blau, gelb)</li>
+            <li>1x RGB-Matrix 8x8</li>
+            <li>1x D1 Mini (USB-C)</li>
+            <li>1x USB-C Kabel</li>
+        </ul>
+
+        <div class="flex-container" style="margin: 0">
+
+        </div>
+        <h2 id="Gehäuse">Gehäuse</h2>
+        <p>Das 3D-Modell, welches als Grundlage dient, stammt von Sebastian Stf22 und wurde ursprünglich auf
+        <a href="https://www.printables.com/model/1250094">3D-Gehäuse Vorlage</a>.
+        veröffentlicht. Das Modell wurde stark modifiziert und wird 3-Farbig ausgedruckt.
+        Die 3D-Druck Dateien können
+        <a href="3dprint_files.zip" download>hier</a></p>
+        </p>
+      
+        <h2 id="Programmierung">Programmierung</h2>
+        <p>Für die Software nutzen wir eine tolle Open-Source-Firmware, die du ganz einfach herunterladen kannst! Der Code stammt von: 
+            <a href="https://github.com/BastiMu/Multilayout-ESP-Wordclock/releases">Software</a>. 
+            Diese Software ist unter der BSD-3-Lizenz lizenziert und darf frei verwendet werden. Das ist super praktisch, um damit zu experimentieren und vielleicht sogar eigene Ideen umzusetzen!
+            Um die Firmware auf deinen ESP zu bekommen, kannst du beispielsweise das ESPWEBTOOL von Spacehuhn nutzen:
+            <a href="https://esptool.spacehuhn.com/">ESPWEBTOOL</a>.
+            Basic_SIEMENS_Wortuhr8x8_ESP8266.bin aus dem Projektordner hochladen.</p>
+      
+         <h2 id="Aufbau">Aufbau</h2>
+            <p>>Adern ca. 3 mm abisolieren.
+            Abisolierte Stellen leicht verdrillen und vorverzinnen.
+            Hierbei beachten, dass eine der Seiten so dünn vorverzinnt ist, dass die Ader durch die Löt-
+            Augen des Controllers passen.</p>
+            <p>Adern durch die Löt-Augen des Controllers stecken und verlöten. Die Adern müssen, wie
+            auf dem Bild zu sehen, von der Seite des USB-Ports durchgeführt werden.</p>
+            <p align="center">
+            <img src="assets/images/solder_microcontroller.png" width ="600" alt="Microcontroller gelötet">
+            </p>
+            <p>Adern auf den Pads der RGB-Matrix festlöten. Hierzu die Löt-Pads der Matrix reichlich vorverzinnen.
+            <p style="color: black; font-style: italic;">Ausrichtung der Adern siehe Bild!</p>
+            <p align="center">
+            <img src="assets/images/solder_matrix.png" width ="600" alt="Matrix gelötet">
+            </p>
+      
+         <h2 id="Montage">Montage</h2>
+            <p>Matrix in den Uhrenkörper einsetzen. Die Anschlüsse müssen oben rechts sitzen. Sonst
+            müsste in der Konfiguration die Orientierung der Matrix geändert werden.
+            Den Controller auf die Montageplatte setzen und den USB-Port in die Öffnung stecken. Es
+            ist darauf zu achten, dass die Adern oberhalb der Montageplatte verlaufen.
+            Anschließend die Montageplatte fest eindrücken. Zuletzt die Rückwand aufsetzen.
+            </p>
+            <p align="center">
+            <img src="assets/images/assembly_housing.png" width ="600" alt="Montage Gehäuse">
+            </p>
+            <p style="color: black; font-style: italic;">Sollte die Uhr im zusammengebauten Zustand nochmal geflasht werden müssen, wird es
+            durch unkontrolliertes Leuchten zu Überhitzung kommen.</p>
+            <p>Die Uhr wird so heiß, dass das Gehäuse weich wird!
+            In einem solchen Fall muss die Uhr zerlegt werden. Die Adern können angelötet bleiben.
+            Die Matrix hält die Wärme aus, allerdings muss man vorsichtig sein. Die Matrix kann sich bis zu ~70° C erhitzen!</p>
+
+        <h2 id="W-Lan Zugang einrichten">W-Lan Zugang einrichten</h2>
+            <p>
+                <li>Wordclock öffnet WLAN-Netz (Connect_to_Wordclock) -> verbinde dich mit deinem Smartphone. Wenn keine Abfrage kommt -> öffne 192.168.4.1 in deinem Browser</li>
+                <li>Wähle ein WLAN-Netz aus (Hotspot oder Heimnetzwerk) und gib das Passwort ein</li>
+                <li>Die Wordclock kann nun die Uhrzeit aus dem Internet abfragen</li>
+            </p>
+
+        <h2 id="Konfiguration">Konfiguration</h2>
+            <p>
+              <li>Notiere die IP-Adresse beim Start der Wordclock. Diese läuft als Zahlen durch</li>
+              <li>Rufe auf einem beliebigen Gerät im Browser die IP-Adresse auf</li>
+              <li>Gerät und Wordclock müssen im selben Netzwerk sein</li>
+            </p>
+
+      <h2 id="Troubleshooting">Troubleshooting</h2>
+            <p>
+                <li>Deine Uhr stellt die Farben falsch dar. Passe die Farbreihenfolge im Webserver unter „Einstellungen -> LED-Typ“ auf GRB an.</li>
+                <li>Der Webserver reagiert nicht. Lade die Seite neu. Sollte das nicht helfen öffne einen neuen Tab oder starte die Wordclock neu (Unplug -> Plugin).</li>
+                <li>Der Webserver ist nicht erreichbar. Checke deine WLAN-Konfig. im Netzwerk (z.B. Geräte
+                untereinander kommunizieren lassen). Du kannst auch ein Hotspot mit dem Smartphone
+                erstellen. Sobald die Wordclock die Zeit hat, kannst du den Hotspot wieder deaktivieren
+                und die Uhr läuft weiter, solange sie eingeschalten bleibt.</li>
+                <li>Auslesen per App „USBTerminal“. Verbinde die Uhr und stelle 115200 Baud ein.</li>
+            </p>
+      
+        <div id="navigation">
+            <a href="index.html">
+                <div id="navigation_left" class="nav_prev">
+                    << Einführung</div>
+            </a>
+            <a href="programming.html">
+                <div id="navigation_right" class="nav_next">Programmierung >></div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+ <div id="footer_wrap" class="outer">
+        <footer class="inner">
+
+            <p class="copyright">LED-Gadget maintained by <a href="https://github.com/spe-khe">spe-khe</a></p>
+
+            <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
